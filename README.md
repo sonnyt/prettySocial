@@ -18,9 +18,16 @@ Field | Description
 `type` | Social Network (twitter, pinterest, facebook, googleplus)
 `url` | URL you want to share
 `description` | Description of the page
+`media` | URL to an image
 
 ### Twitter
 
 Field | Description
 --- | ---
 `via` | Your Twitter screen name
+
+### Facebook
+
+Field | Description
+--- | ---
+`title` | Your page title
