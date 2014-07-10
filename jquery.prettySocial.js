@@ -39,6 +39,13 @@
                         width: 600,
                         height: 600
                     }
+                },
+                linkedin: {
+                    url: 'https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&summary={{description}}+&source={{via}}',
+                    popup: {
+                        width: 600,
+                        height: 600
+                    }
                 }
             },
 
@@ -74,8 +81,12 @@
             };
 
         return this.each(function() {
+
+            // declare $(this) as variable
+            var $this = $(this);
+
             // link type
-            var type = $(this).data('type'),
+            var type = $this.data('type'),
 
                 // set site
                 site = _sites[type] || null;
@@ -87,11 +98,11 @@
 
             // gather link info
             var link = {
-                url: $(this).data('url') || '',
-                title: $(this).data('title') || '',
-                description: $(this).data('description') || '',
-                media: $(this).data('media') || '',
-                via: $(this).data('via') || ''
+                url: $this.data('url') || '',
+                title: $this.data('title') || '',
+                description: $this.data('description') || '',
+                media: $this.data('media') || '',
+                via: $this.data('via') || ''
             };
 
             // prepare link
@@ -99,22 +110,22 @@
 
             // if not, set click trigger
             if (navigator.userAgent.match(/Android|IEMobile|BlackBerry|iPhone|iPad|iPod|Opera Mini/i)) {
-                $(this)
+                $this
                 .bind('touchstart', function (e) {
                     if(e.originalEvent.touches.length > 1) {
                         return;
                     }
 
-                    $(this).data('touchWithoutScroll', true);
+                    $this.data('touchWithoutScroll', true);
                 })
                 .bind('touchmove', function () {
-                    $(this).data('touchWithoutScroll', false);
+                    $this.data('touchWithoutScroll', false);
 
                     return;
                 }).bind('touchend', function (e) {
                     e.preventDefault();
 
-                    var touchWithoutScroll = $(this).data('touchWithoutScroll');
+                    var touchWithoutScroll = $this.data('touchWithoutScroll');
 
                     if (e.originalEvent.touches.length > 1 || !touchWithoutScroll) {
                         return;
@@ -124,7 +135,7 @@
                     _popup(site, url);
                 });
             } else {
-                $(this).bind('click', function (e) {
+                $this.bind('click', function (e) {
                     e.preventDefault();
 
                     // call popup window
