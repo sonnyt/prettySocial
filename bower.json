@@ -1,0 +1,30 @@
+{
+  "name": "prettySocial",
+  "version": "1.1.0",
+  "homepage": "http://sonnyt.com/prettysocial-plugin/",
+  "authors": [
+    "sonnyt"
+  ],
+  "description": "Custom share buttons for Pinterest, Twitter, Facebook and Google Plus.",
+  "main": "jquery.prettySocial.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "social",
+    "jquery",
+    "facebook",
+    "twitter",
+    "linkedin",
+    "pinterest",
+    "google"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
