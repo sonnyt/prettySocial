@@ -31,3 +31,10 @@ Field | Description
 Field | Description
 --- | ---
 `title` | Your page title
+
+### Generic share
+
+You can add your own share url using in the following scheme and previously
+described boiler plates:
+
+    http://example.com/share.php?url={{url}}&title={{title}}
