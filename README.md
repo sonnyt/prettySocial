@@ -16,7 +16,7 @@ These data attributes applied to all social networks.
 Field | Description
 --- | ---
 `type` | Social Network (twitter, pinterest, facebook, googleplus)
-`url` | URL you want to share
+`url` | URL you want to share or current window URL if not defined
 `description` | Description of the page
 `media` | URL to an image
 

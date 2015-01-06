@@ -107,7 +107,7 @@
 
             // gather link info
             var link = {
-                url: $this.data('url') || '',
+                url: $this.data('url') || window.location.href || '',
                 title: $this.data('title') || '',
                 description: $this.data('description') || '',
                 media: $this.data('media') || '',
