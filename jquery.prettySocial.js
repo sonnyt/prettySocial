@@ -93,12 +93,21 @@
 
             // check if social site is selected
             if (!site) {
-                $.error('Social site is not set.');
-            }
+		if (!type) {
+		    $.error('Social site must be a predifined type or a custom url.');
+		}
+		site = {
+		    url: $this.data('type'),
+		    popup: {
+                        width: 600,
+                        height: 600
+		    }
+		}
+	    }
 
             // gather link info
             var link = {
-                url: $this.data('url') || '',
+                url: $this.data('url') || window.location.href || '',
                 title: $this.data('title') || '',
                 description: $this.data('description') || '',
                 media: $this.data('media') || '',
