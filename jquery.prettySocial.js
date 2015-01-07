@@ -46,6 +46,13 @@
                         width: 600,
                         height: 600
                     }
+                },
+                email: {
+                	url: 'mailto:{{username}}@{{host}}&subject={{title}}&body={{description}}',
+                    popup: {
+                        width: 600,
+                        height: 600
+                    }
                 }
             },
 
@@ -75,7 +82,9 @@
                                   .replace(/{{title}}/g, encodeURIComponent(link.title))
                                   .replace(/{{description}}/g, encodeURIComponent(link.description))
                                   .replace(/{{media}}/g, encodeURIComponent(link.media))
-                                  .replace(/{{via}}/g, encodeURIComponent(link.via));
+                                  .replace(/{{via}}/g, encodeURIComponent(link.via))
+                                  .replace(/{{username}}/g, encodeURIComponent(link.username))
+                                  .replace(/{{host}}/g, encodeURIComponent(link.host));
 
                 return url;
             };
