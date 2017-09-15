@@ -15,7 +15,7 @@ These data attributes applied to all social networks.
 
 Field | Description
 --- | ---
-`type` | Social Network (twitter, pinterest, facebook, googleplus)
+`type` | Social Network (twitter, pinterest, facebook, googleplus, linkedin)
 `url` | URL you want to share
 `description` | Description of the page
 `media` | URL to an image
